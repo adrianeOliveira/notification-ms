@@ -1,8 +1,8 @@
-**Proof of Concept**
+**Prova de conceito**
 
-REST App that save, list, update templates that can be sent via JavaMail.
+Aplicação REST para consumo de mensagens.
 
-Technologies:
+Tecnologias:
 
 _SpringBoot_
 _Maven_
@@ -13,4 +13,5 @@ _PostgreSQL_
 _log4j_
 _Junit with Power Mockito_
 
-The values on applicaton.properties are setting through environment variables. 
+Através de requisições rest é possível adicionar, remover, atualizar e listar templetes de email. Esses templetes são armazenadas numa base de dados e ada mensagem é salva juntamente com as informações de remetente, destinatário, quem receberá uma cópia dessa mensagem, além de um identificador único e uma chave. Para disparar o email a aplicação irá consumir mensagens de um fila onde o conteudo, dessa mensagem, é a chave salva no templete. O envio da msg para a fila está implementado no repositório client-test.
+
